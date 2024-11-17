@@ -1,0 +1,51 @@
+.banner{
+        background-color: white;
+        color: #6610f2;
+        text-align: center;
+        font-size : 96px;
+        padding : 30px 0px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        width : 70%;
+        position : relative;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-family: 'TitleFont';
+    }
+.banner_line{
+    height : 3px;
+    width :92%;
+    background-color: #6610f2;
+    margin-bottom : 50px;
+    border-radius : 1px;
+}
+
+@font-face {
+    font-family: 'TitleFont';
+    src: url('../../font/Italiana-Regular.ttf');
+}
+
+@media screen and (max-width : 1080px){
+    .banner{
+        width : 100%;
+        font-size: 72px;
+        padding : 20px 0px;
+        margin-bottom: 0;
+    }
+    .banner_line{
+        margin-bottom : 30px;
+    }
+}
+
+@media screen and (max-width : 550px){
+    .banner{
+        width : 100%;
+        font-size: 42px;
+        padding : 20px 0px;
+        margin-bottom: 0;
+    }
+    .banner_line{
+        margin-bottom : 10px;
+        height : 2px;
+    }
+}

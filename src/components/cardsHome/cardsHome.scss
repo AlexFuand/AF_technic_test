@@ -1,0 +1,139 @@
+.cardsHome{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: white;
+    padding : 20px 0px 50px 0px;
+    gap: 20px;
+    width : 100%;
+    .card{
+        text-decoration: none;
+        cursor : pointer;
+        .card__img_ctn{
+            width : 100%;
+            overflow: hidden;
+            .card__img{
+                width : 100%;
+                height: 100%;
+                object-fit: cover ;
+                transition : all 0.35s;
+                aspect-ratio: 2/1;
+            }
+        }
+        .card__title{
+            color:black;
+            font-size : 14px;
+            font-weight: 700;
+            transition : all 0.35s;
+        }
+        .card__date{
+            color:black;
+            font-size : 12px;
+            font-weight: 400;
+        }
+    &:hover{
+        .card__title{
+            color : #ff6060;
+        }
+        .card__img{
+            opacity : 0.75;
+        }
+    }
+    }
+}
+
+.navBtn{
+    display: flex;
+    justify-content: space-between;
+    padding : 20px;
+    .prevBtn, .nextBtn{
+        min-width: 135px;
+        text-align: center;
+        padding: 7px 15px;
+        border: 2px solid #6610f2;
+        color: #6610f2;
+        border-radius: 25px;
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover{
+            background-color: #6610f2;
+            color: white;
+        }
+    }
+    
+}
+
+.catBtn{
+    display: flex;
+    gap : 10px;
+    margin : 10px 0;
+    width : 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    .filterBtn{
+        padding: 10px 15px;
+        border: 2px solid #6610f2;
+        color: #6610f2;
+        font-size: 14px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        &:hover{
+            background-color : #6610f2;
+            color : white;
+        }
+        &.active{
+            background-color: #6610f2;
+            color: white;
+        }
+    }
+}
+
+.navPage{
+    text-align: center;
+}
+
+@media screen and (max-width : 1080px){
+    .cardsHome{
+        grid-template-columns: repeat(2, 1fr);
+        gap : 10px;
+        padding : 20px;
+        .card{
+            .card__title{
+                font-size : 12px;
+            }
+            .card__date{
+                font-size : 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 550px){
+    .cardsHome{
+        grid-template-columns: repeat(1, 1fr);
+        gap : 10px;
+        padding : 10px;
+        .card{
+            .card__title{
+                font-size : 12px;
+            }
+            .card__date{
+                font-size : 10px;
+            }
+        }
+    }
+    .catBtn{
+        margin : 10px 0;
+        .filterBtn{
+            padding: 5px 10px;
+            border: 1px solid #6610f2;
+            font-size: 12px;
+        }
+    }
+    .navPage{
+        font-size: 12px;
+    }
+}
