@@ -91,8 +91,8 @@ const CardsHome:React.FC= () => {
                                         <figure className='card__img_ctn'>
                                             {article.urlToImage && <img className="card__img" src ={article.urlToImage} alt ={article.title} />}
                                         </figure>
-                                        <h3 className ="card__title">{article.title}</h3>
-                                        <h3 className ="card__date">{new Date(article.publishedAt).toUTCString()}</h3>
+                                        <div className ="card__title">{article.title}</div>
+                                        <div className ="card__date">{new Date(article.publishedAt).toUTCString()}</div>
                                     </div>
                                 </section>
                             )
